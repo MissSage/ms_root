@@ -49,6 +49,27 @@ export const routes = [
         component: () => import("@/views/qiankun/index.vue")
       }
     ]
+  },
+  {
+    meta: {
+      title: "react"
+    },
+    // /:chapters* 用来处理子应用的子路由，不然只能匹配到子应用的根路由/
+    path: "/react/",
+    name: "react",
+    component: () => import("@/views/qiankun/index.vue"),
+    children: [
+      {
+        meta: {
+          title: "react",
+          hide: true
+        },
+        // /:chapters* 用来处理子应用的子路由，不然只能匹配到子应用的根路由/
+        path: "/react/:chapters*",
+        name: "react",
+        component: () => import("@/views/qiankun/index.vue")
+      }
+    ]
   }
 ]
 const router = createRouter({

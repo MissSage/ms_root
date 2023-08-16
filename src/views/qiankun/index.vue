@@ -16,7 +16,8 @@ onMounted(() => {
   start({
     prefetch: 'all', // 预加载
     sandbox: {
-      experimentalStyleIsolation: true, //   开启沙箱模式,实验性方案
+      // experimentalStyleIsolation: true, //   开启沙箱模式,实验性方案
+      // strictStyleIsolation: true
     },
   })
 })
@@ -26,7 +27,7 @@ onMounted(() => {
   height: 100%;
 }
 
-#subAppContainerVue3>div[data-qiankun] {
+#subAppContainerVue3>div {
   height: 100%;
 }
 </style>
