@@ -10,7 +10,7 @@ export const routes = [
   },
   {
     meta: {
-      title: "乾坤"
+      title: "乾坤子应用1"
     },
     // /:chapters* 用来处理子应用的子路由，不然只能匹配到子应用的根路由/
     path: "/vue/",
@@ -19,12 +19,33 @@ export const routes = [
     children: [
       {
         meta: {
-          title: "乾坤",
+          title: "vue3vite",
           hide: true
         },
         // /:chapters* 用来处理子应用的子路由，不然只能匹配到子应用的根路由/
         path: "/vue/:chapters*",
         name: "vue",
+        component: () => import("@/views/qiankun/index.vue")
+      }
+    ]
+  },
+  {
+    meta: {
+      title: "组件文档"
+    },
+    // /:chapters* 用来处理子应用的子路由，不然只能匹配到子应用的根路由/
+    path: "/components/",
+    name: "components",
+    component: () => import("@/views/qiankun/index.vue"),
+    children: [
+      {
+        meta: {
+          title: "组件文档",
+          hide: true
+        },
+        // /:chapters* 用来处理子应用的子路由，不然只能匹配到子应用的根路由/
+        path: "/components/:chapters*",
+        name: "components",
         component: () => import("@/views/qiankun/index.vue")
       }
     ]

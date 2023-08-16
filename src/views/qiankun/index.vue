@@ -8,6 +8,11 @@ import { onMounted } from "vue"
 
 onMounted(() => {
   // 启动 qiankun
+  // if (!window.qiankunStarted) {
+  //   window.qiankunStarted = true
+
+
+  // }
   start({
     prefetch: 'all', // 预加载
     sandbox: {
@@ -17,10 +22,11 @@ onMounted(() => {
 })
 </script>
 <style>
-#subAppContainerVue3{
+#subAppContainerVue3 {
   height: 100%;
 }
-#subAppContainerVue3>div[data-qiankun]{
+
+#subAppContainerVue3>div[data-qiankun] {
   height: 100%;
-  }
+}
 </style>
