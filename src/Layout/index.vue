@@ -1,6 +1,6 @@
 <template>
   <div class="main-layout">
-    <SideBar class="menu"></SideBar>
+    <Header></Header>
     <div class="container">
       <router-view></router-view>
     </div>
@@ -8,7 +8,7 @@
 </template>
 <script lang="ts" setup>
 import { RouterView } from 'vue-router'
-import SideBar from "./components/SideBar.vue"
+import Header from "./components/Header.vue"
 </script>
 <style lang="scss" scoped>
 .main-layout {

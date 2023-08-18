@@ -1,5 +1,5 @@
 <template>
-  <el-menu :mode="'horizontal'" :default-active="router.currentRoute.value.path" router class="navigation-menu-left" active-text-color="#ffd04b"
+  <el-menu :mode="'vertical'" :default-active="router.currentRoute.value.path" router class="navigation-menu-left" active-text-color="#ffd04b"
     background-color="#545c64" text-color="#fff">
     <SideMenuItem v-for="item in routes" :key="item.path" :menu="item"></SideMenuItem>
   </el-menu>

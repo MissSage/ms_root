@@ -17,7 +17,7 @@ export default defineConfig({
     AutoImport({
       // 这里除了引入 vue 以外还可以引入pinia、vue-router、vueuse等，
       // 甚至你还可以使用自定义的配置规则，见 https://github.com/antfu/unplugin-auto-import#configuration
-      imports: ["vue"],
+      imports: ["vue", "vue-router", "pinia", "@vueuse/core"],
       // 第三方组件库的解析器
       resolvers: [ElementPlusResolver()]
     }),
@@ -33,14 +33,19 @@ export default defineConfig({
     })
   ],
   server: {
-    // proxy: {
-    //   "/junminrongheApi": {
-    //     target: "http://localhost:5174", // 后台接口
-    //     changeOrigin: true,
-    //     secure: false, // 如果是https接口，需要配置这个参数
-    //     // ws: true, //websocket支持
-    //     rewrite: path => path.replace(/^\/junminrongheApi/, "")
-    //   }
-    // }
+    // headers: {
+    //   'Access-Control-Allow-Origin': '*'
+    // },
+    // cors: true,
+    proxy: {
+      "/vue3/": {
+        target: "http://localhost:5174/",
+        changeOrigin: true
+      },
+      "/ms_components/": {
+        target: "http://www.piaoerbe.com/",
+        changeOrigin: true
+      }
+    }
   }
 })
