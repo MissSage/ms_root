@@ -8,7 +8,7 @@ export const initQianKun = (isDev: boolean) => {
       // 子应用名称，name值必须与子应用vite.config.ts文件中plugins属性qiankun的第一个参数值一致
       name: "vue3",
       // 默认会加载这个路径下的html，解析里面的js,结尾的/需要
-      entry: isDev ? "//localhost:5174/vue3/" : "//139.155.178.206/vue3/",
+      entry: isDev ? "//localhost:5174/vue3/" : "/vue3/",
       // 加载的容器（微应用会显示到这个容器里面，一定要保证主应用中有这个容器）
       container: "#subAppContainerVue3", // 和app.vue配置的节点一致
       // 匹配的路由
@@ -18,7 +18,7 @@ export const initQianKun = (isDev: boolean) => {
       // 子应用名称，name值必须与子应用vite.config.ts文件中plugins属性qiankun的第一个参数值一致
       name: "ms_components",
       // 默认会加载这个路径下的html，解析里面的js,结尾的/需要
-      entry: isDev ? "//localhost:3456/ms_components/" : "//139.155.178.206/ms_components/",
+      entry: isDev ? "//localhost:3456/ms_components/" : "/ms_components/",
       // 加载的容器（微应用会显示到这个容器里面，一定要保证主应用中有这个容器）
       container: "#subAppContainerVue3", // 和app.vue配置的节点一致
       // 匹配的路由
