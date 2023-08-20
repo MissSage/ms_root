@@ -26,16 +26,16 @@ export const subApps = [
     activeRule: "/components" // 访问：http://localhost:5174/vue
   },
   {
-    title: "react子应用",
+    title: "myweb",
     // 子应用名称，name值必须与子应用vite.config.ts文件中plugins属性qiankun的第一个参数值一致
-    name: "react_app",
-    components: 'react',
+    name: "ms_movie",
+    routeName: 'myweb',
     // 默认会加载这个路径下的html，解析里面的js,结尾的/需要
-    entry: "/ms_react/",
+    entry: "/ms_movie/",
     // 加载的容器（微应用会显示到这个容器里面，一定要保证主应用中有这个容器）
     container: "#subAppContainerVue3", // 和app.vue配置的节点一致
     // 匹配的路由
-    activeRule: "/react" // 访问：http://localhost:5174/vue
+    activeRule: "/myweb" // 访问：http://localhost:5174/vue
   }
   // 再有其他子应用，同理
 ]

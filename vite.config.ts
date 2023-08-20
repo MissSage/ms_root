@@ -39,12 +39,18 @@ export default defineConfig({
     // cors: true,
     proxy: {
       "/vue3/": {
-        target: "http://localhost:5174/",
+        target: "http://www.piaoerbe.com/",
         changeOrigin: true
       },
       "/ms_components/": {
         target: "http://www.piaoerbe.com/",
         changeOrigin: true
+      },
+      "/ms_movie/": {
+        // target: "http://localhost:5000/",
+        target: "http://www.piaoerbe.com/",
+        changeOrigin: true,
+        // rewrite: path=> path.replace('^/ms_movie','')
       }
     }
   }
